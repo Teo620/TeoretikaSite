@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misterele Neștiute: Cuvântul cu D</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #1a222a;
+            color: #e0e6ed;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            background-color: #11161b;
+            border: 1px solid #2c3845;
+            padding: 40px 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            letter-spacing: 3px;
+            margin-bottom: 40px;
+            color: #b0c4de;
+            text-transform: uppercase;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 500px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: #8fa3b8;
+            text-transform: uppercase;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 250px;
+            background-color: #1a222a;
+            border: 1px solid #25313d;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        /* Generare text subtil de fundal în interiorul imaginilor pentru atmosferă */
+        .image-placeholder::before {
+            content: "??";
+            font-size: 5rem;
+            color: #151b22;
+            font-weight: bold;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #a0aec0;
+            font-style: italic;
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #cbd5e0;
+        }
+
+        .btn {
+            background-color: #e2e8f0;
+            color: #11161b;
+            border: none;
+            padding: 12px 30px;
+            font-family: inherit;
+            font-weight: bold;
+            letter-spacing: 2px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #cbd5e0;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Misterele Neștiute: "Cuvântul cu D"</h1>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Căutare</h2>
+                <div class="image-placeholder" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519074069444-1ba4fff16411?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                <p>Cineva a șters numele.</p>
+            </div>
+
+            <div class="card">
+                <h2>Dispariție</h2>
+                <div class="image-placeholder" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1509114397022-ed747cca3f65?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                <p>Doar o umbră a mai rămas.</p>
+            </div>
+
+            <div class="card">
+                <h2>Destruct</h2>
+                <div class="image-placeholder" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1536566482680-fca31930a0bd?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                <p>Prețul a fost uitarea.</p>
+            </div>
+
+            <div class="card">
+                <h2>Pecizat</h2>
+                <div class="image-placeholder" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                <p>Ascultă liniștea... ea spune totul.</p>
+            </div>
+        </div>
+
+        <div class="description">
+            <p>Nu este o pierdere, ci o transformare finală. Aici, unde realitatea se dizolvă, se simte prezența unui act care nu lasă urme, ci doar un vid. Unii spun că e o eliberare, alții un blestem. Ce rămâne după ce totul este îndepărtat? Doar teama și întrebarea... ce a fost înainte de CUVÂNT?</p>
+        </div>
+
+        <button class="btn" onclick="alert('Unele secrete sunt făcute să rămână îngropate...')">Vrei să știi?</button>
+    </div>
+
+</body>
+</html>
