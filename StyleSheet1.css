@@ -51,7 +51,7 @@
     /*section1 start*/
 
 .section1{
-    background-color: rgb(188, 117, 255);
+    background-color: rgb(68, 218, 93);
     display: flex;
     width: auto;
     height:calc(100vh - 75px);
@@ -63,16 +63,24 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    align-content: center;
 }
 
 .section1_container h1{
-    color:white;
+    font-weight: bolder;
+    font-size: 30px;
+    background: linear-gradient(#ffffff, #aaaaaa);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: monospace;
 }
 
 .section1_container h3{
-    color:white;
+    background: linear-gradient(90deg,#dab2ff, #9858ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: arial; 
+    font-weight: 100;
 }
 
 
@@ -98,7 +106,8 @@
 
 .sponsors_header p{
     color:white;
-    font-family: arial;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: bold;
     font-size: 40px;
 }
 
@@ -114,7 +123,7 @@
 }
 
 .box {
-    background-color: linear-gradient(rgb(40, 40, 43),rgb(64, 64, 65),rgb(40, 40, 43)) ;
+    background: linear-gradient(-45deg,rgb(0, 0, 0,0.8),rgb(12, 5, 37,0.9),rgb(0, 0, 0,0.8)) top center;
     width: 40vh;
     height: 20hv;
     display: flex;
@@ -123,19 +132,20 @@
     align-items: center;
     align-content: space-around;
     border-style: solid;
-    border-color: rgb(65, 64, 64);
+    border-color: rgb(70, 70, 70,0.5);
     border-radius: 30px;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.box:click{
+    
 }
 
 .box img{
     height: 20vh;
-}
-
-@media(max-width: 1800px)
-{
-    .sponsors_container{
-        flex-wrap: wrap;
-    }
 }
 
 .sponsors_footer {
@@ -150,7 +160,10 @@
 }
 
 .sponsors_footer p{
-    color:white;
+    font-weight: bold;
     font-family: arial;
     font-size: 40px;
+    background: linear-gradient(#ffffff, #8b8b8b);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
