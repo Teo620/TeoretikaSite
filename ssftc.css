@@ -17,10 +17,10 @@ body {
     /*navbar start*/
 
 .navbar{
-    position: sticky;
+    position:sticky;
     top:0;
     height:75px;
-    width:auto;
+    width:100%;
     background: linear-gradient(black,rgb(44, 21, 128)) top center;
     display:flex;
     box-shadow: 1px 1px 20px 10px;
@@ -162,7 +162,7 @@ body {
     right:10px;
     width: 50px;
     height: 50px;
-    position: fixed;
+    position: absolute;
 }
 
 .line1{
@@ -177,13 +177,13 @@ body {
   overflow: hidden;
   width: 100%;
   background: linear-gradient(rgb(44, 21, 128),rgba(11, 31, 212, 0.815)) top center;
-  position: fixed;
   z-index: 9999999999;
+  position: fixed;
 }
 
 .topnav #myLinks {
   display: none;
-  position: fixed;
+  
 }
 
 .topnav a {
