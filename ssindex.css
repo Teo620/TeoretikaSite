@@ -173,7 +173,7 @@ body {
 }
 
 .topnav {
-  overflow: hidden;
+  overflow: auto;
   width: 100%;
   background: linear-gradient(rgb(44, 21, 128),rgba(11, 31, 212, 0.815)) top center;
   position: fixed;
