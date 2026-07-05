@@ -162,7 +162,7 @@ body {
     right:10px;
     width: 50px;
     height: 50px;
-    position: absolute;
+    position: fixed;
 }
 
 .line1{
@@ -183,62 +183,7 @@ body {
 
 .topnav #myLinks {
   display: none;
-}
-
-.topnav a {
-  color: rgb(255, 255, 255);
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
-
-.topnav a.icon {
-  display: block;
-  right: 3px;
-}
-
-.arrow{
-    height: 10px;
-}
-
-}
-@media (max-width: 600px) {
-.navbar_menu{
-    display: none;
-}
-
-.phone_nav{
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    flex-direction: column;
-    align-items:center;
-    gap:5px;
-    right:10px;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-}
-
-.line1{
-    width: 90%;
-    height: 12%;
-    background-color: white;
-    border-radius:10px;
-        
-}
-
-.topnav {
-  overflow: hidden;
-  width: 100%;
-  background: linear-gradient(rgb(44, 21, 128),rgba(11, 31, 212, 0.815)) top center;
   position: fixed;
-  z-index: 9999999999;
-}
-
-.topnav #myLinks {
-  display: none;
 }
 
 .topnav a {
@@ -259,6 +204,7 @@ body {
 }
 
 }
+
 @media (min-width: 601px) {
 .phone_nav{
     display: none;
