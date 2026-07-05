@@ -33,10 +33,113 @@
           ><div class="navbar_item"><p>Contact us</p></div></a
         >
       </div>
-    </nav>
+           <div class="phone_nav" onclick="Show_menu()">
+        <div class="line1"></div>
+        <div class="line1"></div>
+        <div class="line1"></div>
+      </div>
+  </nav>
+  <div class="topnav">
+  <div id="menu_tabs">
+    <a id="onn">What is FTC?</a>
+<a href="javascript:void(0);" class="icon" onclick="Show_seasons()">Seasons <img class="arrow" src="Images/arrowdown.png"></a>
+    <div id="seasons" class="dropdown_seasons">
+      <a href="season10.html">Season 10</a>
+      <a href="season9.html">Season 9</a>
+    </div>
+    <a href="contact.html">Contact us</a>
+  </div>
+  </div>
+
+<script>
+function Show_menu() {
+  var x = document.getElementById("menu_tabs");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+function Show_seasons() {
+  var x = document.getElementById("seasons");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+      <!-- INTRO -->
+
+
+      <div class="intro">
+        <video autoplay loop width="1915" height="1080">
+          <source src="Images/ftc.mp4" type="video/mp4">
+        </video>
+        <div class="intro_container">
+            <h1>FIRST TECH CHALLENGE</h1>
+        </div>
+      </div>
+
+
+      <!-- WHAT IS FTC -->
+
+
+      <div class="main">
+        <div class="main_g">
+            <div class="main_title">
+              <h1>What is FTC?</h1>
+            </div>
+            <div class="main_text">
+              <p>FIRST Tech Challenge (FTC) is a robotics competition for students in grades 7–12 to compete head to head, by designing, building, and programming a robot to compete in an alliance format against other teams.</p>
+              <br>
+              <p>The competition consists of local qualifiers, regional championships and the world championship, the FIRST Championship, and in every season, a kickoff is held to showcase the season's theme and game. After kickoff, robots are designed, built, and programmed by teams, and teams are encouraged to conduct outreach with their communities. Local qualifiers are held for teams to compete and qualify for regional championships, and from that point, regional championships are held for teams to qualify for the world championship.</p>
+              <br>
+              <p>The robot kit is Android-based, and it is programmed using Java, Kotlin, the Blocks programming interface created with Blockly, or other Android programming systems. Teams, with the guidance of coaches, mentors and volunteers, are required to develop strategy and build robots based on innovative, sound engineering principles. Awards are given for robot performance as well as for community outreach, design, and other real-world accomplishments.</p>
+            </div>
+        </div>
+      </div>
+
+
+      <!-- FTC ROMANIA -->
+
+      <div class="ftcro">
+        <div class="ftcro_g">
+            <div class="ftcro_title">
+              <h1>FTC Romania</h1>
+            </div>
+              <div class="ftcro_text">
+                <p>Romania has evolved into a global powerhouse within the FIRST Tech Challenge community, currently ranking as the third-largest network in the world behind only the United States and China. 
+                  What started in 2016 with just 54 pioneering teams has expanded exponentially into a massive ecosystem of over 240 active high school teams. This unprecedented growth is heavily supported by the 
+                  NGO Nație Prin Educație, which secures corporate sponsorships to eliminate registration fees for public schools. This unique financial model removes economic barriers, 
+                  allowing students from small towns and rural areas across all 41 Romanian counties to access advanced engineering, 3D printing, and manufacturing tools that would otherwise be unavailable to them.</p>
+                <br>
+                <p>The competitive level within the Romanian circuit is exceptionally high, which has translated into historic dominance on the global stage. 
+                  At the 2026 FIRST World Championship in Houston, Texas, Romanian teams achieved an unprecedented sweep of the global podium. Team Velocity from Brăila claimed the ultimate title of World Champions, 
+                  closely followed by Hearts of RoBots from Buzău in second place, and Quantum Robotics from Bucharest in third place. Other veteran teams like Alphatronic (the 2025 National Champions), Ro2D2 from Prahova, 
+                  and CyLiis from Iași have also built legendary reputations, frequently winning high-stakes 
+                  offseason tournaments in the United States like the Maryland Tech Invitational.</p>
+              </div>
+            </div>
+      </div>
+
+
+      <!-- FTC TEAMS -->
+
+
+      <div class="teams">
+        <div class="teams_container">
+          <div class="teams_box">
+            <div class="box_over"><h1>OVER</h1></div>
+            <div class="box_number"><p>test</p> </div>
+            <div class="box_info"><h1>TEAMS</h1></div>
+          </div>
+        </div>
+      </div>
 
 
       <!-- FOOTER -->
+
 
   <div class="footer">
     <div class="ftc">

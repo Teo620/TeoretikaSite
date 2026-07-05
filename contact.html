@@ -45,7 +45,42 @@
         <p>Contact us</p>
       </div>
     </div>
+      <div class="phone_nav" onclick="Show_menu()">
+        <div class="line1"></div>
+        <div class="line1"></div>
+        <div class="line1"></div>
+      </div>
   </nav>
+  <div class="topnav">
+  <div id="menu_tabs">
+    <a href="/ftc.html">What is FTC?
+<a href="javascript:void(0);" class="icon" onclick="Show_seasons()">Seasons <img class="arrow" src="Images/arrowdown.png"></a>
+    <div id="seasons" class="dropdown_seasons">
+      <a href="season10.html">Season 10</a>
+      <a href="season9.html">Season 9</a>
+    </div>
+    <a id="onn">Contact us</a>
+  </div>
+  </div>
+
+<script>
+function Show_menu() {
+  var x = document.getElementById("menu_tabs");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+function Show_seasons() {
+  var x = document.getElementById("seasons");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
 
   <div class="main">
     <form class="main_container" action="/submit-form-endpoint" method="POST">

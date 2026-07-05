@@ -57,6 +57,10 @@ body {
     background-color: rgb(44, 21, 128);
 }
 
+#onn{
+    background-color: #274fff;
+}
+
 .navbar_item:not(#on):hover{
     background: linear-gradient(#5739ff,rgb(41, 3, 255)) top center;
 }
@@ -112,6 +116,8 @@ body {
     color:rgb(209, 208, 208);
 }
 
+
+
 .resize{
     width:80px;
     height: auto;
@@ -142,6 +148,96 @@ body {
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 600px) {
+.navbar_menu{
+    display: none;
+}
+
+.phone_nav{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    gap:5px;
+    right:10px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+.line1{
+    width: 90%;
+    height: 12%;
+    background-color: white;
+    border-radius:10px;
+        
+}
+
+.topnav {
+  overflow: hidden;
+  width: 100%;
+  background: linear-gradient(rgb(44, 21, 128),rgba(11, 31, 212, 0.815)) top center;
+  position: fixed;
+  z-index: 9999999999;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: rgb(255, 255, 255);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  display: block;
+  right: 3px;
+}
+
+.arrow{
+    height: 10px;
+}
+
+}
+@media (min-width: 601px) {
+.phone_nav{
+    display: none;
+}
+
+.line1{
+    display: none;
+        
+}
+
+.topnav {
+ display: none;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+ display: none;
+}
+
+.topnav a.icon {
+  display: none;
+}
+
+.arrow{
+    display: none;
+}
+}
+
+
+
 
 /* main starts */
 
@@ -206,6 +302,8 @@ textarea{
 }
 
 #submit{
+    padding:0 ;
+    align-items: center;
     font-weight: bold;
     font-size:200%;
     height: 10%;
@@ -253,6 +351,29 @@ textarea{
     z-index: -1;
 }
 
+@media (max-width: 600px) {
+
+.main_box{
+    flex-direction: column;
+    width:95%;
+}
+
+#submit{
+    font-size:100%;
+    width: 50%;
+}
+
+}
+@media (max-width: 768px) 
+{
+    
+   #submit{
+    font-size:120%;
+}
+    
+}
+
+
 
 
 /* footer start */
@@ -270,7 +391,7 @@ textarea{
     top:0;
     height: 100%;
     width: 45%;
-    position: absolute;
+    position: relative;
     left:5%;
     align-content: center;
 }
@@ -286,7 +407,9 @@ textarea{
     height: 100%;
     width: 50%;
     right:0;
+    
 }
+
 
 .links{
     display: flex;
@@ -344,3 +467,34 @@ textarea{
     font-family: monospace;
 }
 
+@media (max-width:600px){
+    
+.ftc{
+    display: flex;
+    width: 100%;
+    left: 0;
+    right:0;
+    justify-items: center;
+    height: 30%;
+}
+
+.ftc img{
+    top:20px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    justify-self: center;
+}
+
+.contact{
+    top:30px;
+    position: absolute;
+    width:100%;
+    height:fit-content;
+}
+    
+.email{
+    top:107px;
+}
+
+}
