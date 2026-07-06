@@ -348,10 +348,7 @@ body {
 }
 
 @media (max-width: 600px) {
-    .about_us_container{
-        ;
 
-    }
     .about_us_container img{
         display: none;
 }
@@ -589,4 +586,5 @@ body {
     top:107px;
 }
 
+}
 }
