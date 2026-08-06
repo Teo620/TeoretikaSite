@@ -88,7 +88,7 @@ function Show_seasons() {
   <input class="main_box" type="text" name="LastName" placeholder="Last Name" required />
   <input class="main_box" type="text" name="FirstName" placeholder="First Name" required />
   <input class="main_box" type="email" name="Email" placeholder="Email" required />
-  <input class="main_box" type="text" name="Phone" placeholder="Phone Number" />
+  <input  class="main_box" type="tel"  name="Phone"  placeholder="Phone Number"  required pattern="[0-9]+" title="Please enter only numbers." />
   <textarea class="main_box" name="Message" placeholder="Message"></textarea>
   <input class="main_box" type="submit" id="submit" value="Send" />
 
@@ -143,6 +143,18 @@ function Show_seasons() {
         submitBtn.disabled = true;
 
         const data = new FormData(form);
+
+        // Preluăm valoarea câmpului de telefon
+const phoneInput = form.querySelector('input[name="Phone"]');
+const phoneRegex = /^[0-9]+$/; // Expresie care permite doar cifre
+
+if (!phoneRegex.test(phoneInput.value.trim())) {
+  status.innerText = 'Te rugăm să introduci un număr de telefon valid (doar cifre).';
+  status.classList.add('error');
+  submitBtn.value = originalBtnValue;
+  submitBtn.disabled = false;
+  return; // Oprește trimiterea
+}
 
         try {
           const response = await fetch(form.action, {
