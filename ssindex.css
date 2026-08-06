@@ -371,6 +371,27 @@ body {
         width:85%;
 }
 }
+
+ @media (min-width: 600px) and (max-width: 1200px) {
+
+    .about_us_container img{
+        display: none;
+}
+
+
+    .about_us_container h1{
+        font-size: 60px;
+        top:4%;
+        left:9%;
+    }
+
+    .about_us_container p{
+        font-size: 20px;
+        top:20%;
+        left:9%;
+        width:85%;
+}
+}
     /*about us end*/
 
 

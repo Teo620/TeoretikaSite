@@ -4,6 +4,16 @@
     padding:0;
 }
 
+*::selection {
+  background: #00000069;
+  color: rgb(115, 0, 202);
+  text-shadow: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
     /*navbar start*/
 
 .navbar{
@@ -14,10 +24,12 @@
     background: linear-gradient(black,rgb(44, 21, 128)) top center;
     display:flex;
     box-shadow: 1px 1px 20px 10px;
+    z-index: 9999;
 }
 
 .navbar p, a{
     color:white;
+    font-weight: bold;
     font-family: sans-serif;
     text-decoration: none;
     font-size:20px
@@ -45,8 +57,12 @@
     background-color: rgb(44, 21, 128);
 }
 
-.navbar_item:hover{
-    background: linear-gradient(#444444,rgb(58, 58, 58)) top center;
+#onn{
+    background-color: #274fff;
+}
+
+.navbar_item:not(#on):hover{
+    background: linear-gradient(#5739ff,rgb(41, 3, 255)) top center;
 }
 
 .navbar_item img{
@@ -59,13 +75,14 @@
     width: 100%;
     position:absolute;
     left: 0;
-    background-color: #444444;
+    background-color: rgb(41, 3, 255);
     flex-direction: column;
     height: auto;
 }
 
 #Dropdown:hover .dropdown{
     display: flex;
+    animation: drop 0.5s;
 }
 
 .dropdown_item{
@@ -76,11 +93,10 @@
     align-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-top:solid grey
 }
 
-.navbar_item:not(#on):hover{
-    background-color: #8b8b8b;
+.dropdown_item:hover{
+    background-color: rgb(128, 119, 255);
 }
 
 .navbar_logo{
@@ -97,7 +113,7 @@
 
 .navbar_logo p:hover{
     transform: scale(110%);
-    color:rgb(126, 126, 126);
+    color:rgb(209, 208, 208);
 }
 
 .resize{
@@ -105,10 +121,29 @@
     height: auto;
 }
 
+ @media(min-width:601) and (max-width:1000) {
+    .navbar_logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}
+
 .resize:hover{
     animation-name:spin;
     animation-duration: 3s;
     animation-direction: alternate;
+}
+
+@keyframes drop {
+    0%{
+        transform: translatey(-30px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
 }
 
 @keyframes spin {
@@ -118,4 +153,96 @@
   to {
     transform: rotate(360deg);
   }
+}
+@media (max-width: 600px) {
+.navbar_menu{
+    display: none;
+}
+
+.phone_nav{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    gap:5px;
+    right:10px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+.line1{
+    width: 90%;
+    height: 12%;
+    background-color: white;
+    border-radius:10px;
+        
+}
+
+.topnav {
+  overflow: auto;
+  width: 100%;
+  background: linear-gradient(rgb(44, 21, 128),rgba(11, 31, 212, 0.815)) top center;
+  position: fixed;
+  z-index: 9999999999;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: rgb(255, 255, 255);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  display: block;
+  right: 3px;
+}
+
+.arrow{
+    height: 10px;
+}
+
+}
+@media (min-width: 601px) {
+.phone_nav{
+    display: none;
+}
+
+.line1{
+    display: none;
+        
+}
+
+.topnav {
+ display: none;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+ display: none;
+}
+
+.topnav a.icon {
+  display: none;
+}
+
+.arrow{
+    display: none;
+}
+}
+
+
+.box_number{
+    font-size: 100px ;
+     font-family: Arial, sans-serif;
 }
