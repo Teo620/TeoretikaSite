@@ -83,14 +83,16 @@ function Show_seasons() {
 </script>
 
   <div class="main">
-    <form class="main_container" action="/submit-form-endpoint" method="POST">
-      <input class="main_box" type="text" maxlength="15" placeholder="Last Name" />
-      <input class="main_box" type="text" maxlength="15" placeholder="First Name" />
-      <input class="main_box" type="text" maxlength="30" placeholder="Email" />
-      <input class="main_box" type="text" maxlength="15" placeholder="Phone Number" />
-      <textarea class="main_box" placeholder="Message"></textarea>
-      <input class="main_box" type="submit" id="submit" />
-    </form>
+    <form id="contact-form" class="main_container" action="https://formspree.io/f/xljrddol" method="POST">
+    <p id="form-status" class="form_status"></p>
+  <input class="main_box" type="text" name="LastName" placeholder="Last Name" required />
+  <input class="main_box" type="text" name="FirstName" placeholder="First Name" required />
+  <input class="main_box" type="email" name="Email" placeholder="Email" required />
+  <input class="main_box" type="text" name="Phone" placeholder="Phone Number" />
+  <textarea class="main_box" name="Message" placeholder="Message"></textarea>
+  <input class="main_box" type="submit" id="submit" value="Send" />
+
+</form>
 
     <div class="main_g"></div>
   </div>
@@ -125,6 +127,61 @@ function Show_seasons() {
       <p>© 2026 Teoretika | #22114. All Rights Reserved.</p>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contact-form');
+      const status = document.getElementById('form-status');
+      const submitBtn = document.getElementById('submit');
+
+      if (!form) return;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const originalBtnValue = submitBtn.value;
+        submitBtn.value = 'Sending...';
+        submitBtn.disabled = true;
+
+        const data = new FormData(form);
+
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            status.innerText = 'Message sent successfully!';
+            status.style.color = '#4CAF50';
+            status.style.display = 'block';
+            form.reset();
+          } else {
+            const responseData = await response.json();
+            if (Object.hasOwn(responseData, 'errors')) {
+              status.innerText = responseData.errors.map(error => error["message"]).join(", ");
+              
+            } else {
+              status.innerText = 'Oops! There was a problem submitting your form.';
+            }
+            status.style.color = '#f44336';
+            status.style.display = 'block';
+            status.style.textShadow = '-1px -1px 0 #E0998B, 1px -1px 0 #E0998B, -1px 1px 0 #E0998B, 1px 1px 0 #E0998B';
+          }
+        } catch (error) {
+          status.innerText = 'Oops! There was a network problem.';
+          status.style.color = '#f44336';
+          status.style.display = 'block';
+          
+        } finally {
+          submitBtn.value = originalBtnValue;
+          submitBtn.disabled = false;
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
