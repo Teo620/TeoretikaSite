@@ -1,0 +1,271 @@
+<!doctype html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="preload" href="https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js" as="script">
+    <link rel="preload" href="https://prod.spline.design/o3X4gXaHPWJ5Xpea/scene.splinecode" as="fetch" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Teoretika | 22114</title>
+    <link rel="icon" type="image/x-icon" href="Images/teo.svg">
+    <link rel="stylesheet" href="ssseasons.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar_logo">
+        <img class="resize" src="Images/teo.png" />
+        <a href="index.html">
+          <p>TeoretiKa</p>
+        </a>
+  
+      </div>
+      <div class="navbar_menu">
+        <a href="/ftc.html"
+          ><div class="navbar_item"><p>What is FTC?</p></div></a
+        >
+
+        
+        <div class="navbar_item" id="Dropdown">
+          <p>Seasons</p>
+          <img src="Images/arrowdown.png" />
+          <div class="dropdown">
+            <a 
+              ><div class="dropdown_item"><p>Season 10</p></div></a
+            >
+            <a href="season9.html"
+              ><div class="dropdown_item"><p>Season 9</p></div></a
+            >
+          </div>
+        </div>
+        
+        <a href="/contact.html"
+          ><div class="navbar_item"><p>Contact us</p></div></a
+        >
+      </div>
+         <div class="phone_nav" onclick="Show_menu()">
+        <div class="line1"></div>
+        <div class="line1"></div>
+        <div class="line1"></div>
+      </div>
+  </nav>
+  <div class="topnav">
+  <div id="menu_tabs" style="display: none;">
+    <a href="/ftc.html">What is FTC?
+<a href="javascript:void(0);" class="icon" onclick="Show_seasons()">Seasons <img class="arrow" src="Images/arrowdown.png"></a>
+    <div id="seasons" class="dropdown_seasons">
+      <a>Season 10</a>
+      <a href="season9.html">Season 9</a>
+    </div>
+    <a href="/contact.html">Contact us</a>
+  </div>
+  </div>
+
+<script>
+function Show_menu() {
+  var x = document.getElementById("menu_tabs");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+function Show_seasons() {
+  var x = document.getElementById("seasons");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+<!-- ceva ceva -->
+<!--<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/o3X4gXaHPWJ5Xpea/scene.splinecode"></spline-viewer>
+-->
+<!-- Title  -->
+
+<!-- meets  -->
+
+<div class="ts-meets-page">
+  <canvas class="ab-bg-canvas" id="abBgCanvas"></canvas>
+  <div class="season-badge">
+<div class="season-badge">
+  <span class="season-kicker">Current Season</span>
+  <p class="season_title">Season 10</p>
+</div>
+  <div class="mt-header">
+    <div>
+      <p class="mt-eyebrow">TeoretiKa · Season 2025–2026</p>
+      <h1>Meets</h1>
+    </div>
+    <div class="mt-header-stats" id="mt-header-stats"></div>
+  </div>
+ 
+  <div class="mt-hazard"></div>
+ 
+  <div class="mt-list" id="mt-list">
+  </div>
+       <div class="mt-header2"><h1>Robot Specifications</h1></div>
+       <div class="mt-hazard2"></div>
+</div>
+ 
+<div class="mt-lightbox" id="mt-lightbox">
+  <button class="mt-lightbox-close" id="mt-lightbox-close">&times;</button>
+  <button class="mt-lightbox-nav mt-lightbox-prev" id="mt-lightbox-prev">&#10094;</button>
+  <img id="mt-lightbox-img" src="" alt="">
+  <button class="mt-lightbox-nav mt-lightbox-next" id="mt-lightbox-next">&#10095;</button>
+  <div class="mt-lightbox-count" id="mt-lightbox-count"></div>
+</div>
+ 
+<script src="Meets/meets10.js"></script>
+<script src="seasonsbg2.js"></script>
+
+
+<!-- Robot -->
+<div class="ts-robot-page">
+  <!-- Sidebar -->
+  <aside class="rp-sidebar">
+    <div class="rp-title">
+      <h1>Robotul</h1>
+      <p class="rp-version">v6 — "Teo"</p>
+    </div>
+ 
+    <div class="rp-photo">
+      <img src="Images/Fullrobot.png" alt="Full robot photo">
+    </div>
+ 
+    <div class="rp-telemetry">
+      <p class="rp-label">Detalii Sezon</p>
+      <div class="rp-stat-row">
+        <span>Meciuri</span>
+        <span class="rp-stat-value">38</span>
+      </div>
+      <div class="rp-stat-row">
+        <span>Rata de castig</span>
+        <span class="rp-stat-value rp-accent">78%</span>
+      </div>
+      <div class="rp-stat-row">
+        <span>Cel mai bun scor</span>
+        <span class="rp-stat-value rp-accent">253</span>
+      </div>
+      <div class="rp-stat-row">
+        <span>Meet-uri</span>
+        <span class="rp-stat-value">4</span>
+      </div>
+    </div>
+ 
+    <div class="rp-subsystems">
+      <p class="rp-label">Select Subsystem</p>
+      <button class="rp-sub-btn active" data-subsystem="chassis">Chassis</button>
+      <button class="rp-sub-btn" data-subsystem="intake">Intake</button>
+      <button class="rp-sub-btn" data-subsystem="outtake">Outtake</button>
+    </div>
+  </aside>
+ 
+  <!-- Main panel -->
+  <main class="rp-main">
+    <div class="rp-image-wrap">
+      <img id="rp-main-img" src="Images/S10Chasis.png" alt="Chassis">
+      <div class="rp-image-caption">
+        <h2 id="rp-sub-title">Chassis</h2>
+        <p id="rp-sub-subtitle" class="rp-mono rp-accent">SUBSYSTEM.CHASSIS</p>
+      </div>
+    </div>
+ 
+    <p id="rp-description" class="rp-description">
+      Sasiu robust, cu o construcție solidă
+    </p>
+ 
+    <div class="rp-stat-grid" id="rp-stat-grid">
+    </div>
+
+</div>
+ 
+<script src="Robospecs/Robotspec10.js"></script>
+
+<!--Members-->
+
+<div class="ts-members-page">
+ 
+  <div class="mb-header">
+    <div>
+      <h1>Team</h1>
+    </div>
+    <div class="mb-header-stats">
+      <div id="mb-header-stats"></div>
+    </div>
+  </div>
+ 
+  <div class="mb-hazard"></div>
+ 
+  <div class="mb-content">
+    <div id="mb-mentors"></div>
+    <div id="mb-departments"></div>
+    <div id="mb-volunteers"></div>
+  </div>
+ 
+</div>
+ 
+<script src="Members/members10.js"></script>
+<!-- scripts -->
+<script>
+  const splineViewer = document.querySelector('spline-viewer');
+
+  function hideSplineLogo() {
+    if (splineViewer && splineViewer.shadowRoot) {
+
+      const style = document.createElement('style');
+      style.textContent = '#logo { display: none !important; visibility: hidden !important; }';
+      splineViewer.shadowRoot.appendChild(style);
+    }
+  }
+
+ 
+  hideSplineLogo();
+  const interval = setInterval(() => {
+    if (splineViewer && splineViewer.shadowRoot) {
+      hideSplineLogo();
+
+      const logo = splineViewer.shadowRoot.querySelector('#logo');
+      if (logo) {
+        logo.style.display = 'none';
+        clearInterval(interval);
+      }
+    }
+  }, 100);
+</script>
+
+ <!-- FOOTER -->
+
+  <div class="footer">
+    <div class="ftc">
+      <img src="Images/ftc.png" />
+    </div>
+    <div class="contact">
+      <div class="links">
+        <a href="https://www.instagram.com/teoretikaftc/" target="_blank" rel="noopener noreferrer">
+          <div class="links_box"><img src="Images/instagram.png" /></div>
+        </a>
+        <a href="https://www.tiktok.com/@teoretikaftc" target="_blank" rel="noopener noreferrer">
+          <div class="links_box"><img src="Images/tiktok.png" /></div>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61581555331622" target="_blank" rel="noopener noreferrer">
+          <div class="links_box"><img src="Images/facebook.png" /></div>
+        </a>
+        <a href="https://linktr.ee/teoretika?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank"
+          rel="noopener noreferrer">
+          <div class="links_box"><img src="Images/linktree.png" /></div>
+        </a>
+      </div>
+      <div class="email">
+        <p>teoretika@licteneg.ro</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2026 Teoretika | #22114. All Rights Reserved.</p>
+    </div>
+  </div>
+  
+  </body>
+</html>
+

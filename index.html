@@ -2,6 +2,9 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
+        <link rel="preload" href="https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js" as="script">
+    <link rel="preload" href="https://prod.spline.design/njtTr4RYEyaLs56A/scene.splinecode" as="fetch" crossorigin="anonymous">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Teoretika | 22114</title>
@@ -27,7 +30,7 @@
             <a href="season10.html"
               ><div class="dropdown_item"><p>Season 10</p></div></a
             >
-            <a href="seasons.html"
+            <a href="season9.html"
               ><div class="dropdown_item"><p>Season 9</p></div></a
             >
           </div>
@@ -73,31 +76,51 @@ function Show_seasons() {
   }
 }
 </script>
+  
+  <!-- <spline-viewer url="https://prod.spline.design/njtTr4RYEyaLs56A/scene.splinecode"></spline-viewer> -->
+   
+  <!-- Slideshow  -->
+<div class="ts-slideshow-wrap">
+<div class="slideshow" id="slideshow">
+  <div class="hero-text">
+    <h1>Turning theoretical ideas into reality</h1>
+    <p>Since 2022</p>
+  </div>
+ 
+  <div class="slides" id="slides">
+    <div class="slide"><img src="Images/Slideshow1.jpg" alt="Slide 1"></div>
+    <div class="slide"><img src="Images/Slideshow2.jpg" alt="Slide 2"></div>
+    <div class="slide"><img src="Images/Slideshow3.jpg" alt="Slide 3"></div>
+    <div class="slide"><img src="Images/Slideshow4.png" alt="Slide 4"></div>
+    <div class="slide"><img src="Images/Slideshow5.jpg" alt="Slide 5"></div>
+    <div class="slide"><img src="Images/Slideshow6.jpg" alt="Slide 6"></div>
+  </div>
+  </div>
+ 
+  <button class="nav prev" id="prevBtn">&#10094;</button>
+  <button class="nav next" id="nextBtn">&#10095;</button>
+ 
+  <div class="dots" id="dots"></div>
+</div>
+ </div>
+<script src="Slideshow.js"></script>
 
 
 
-
-
-
-    <div class="section1">
-      <div class="section1_container">
-        <h1>Turning theoretical ideas into reality</h1>
-        <h3>Since 2022</h3>
-      </div>
-    </div>
-
-
-
-
-
-
+   <!-- About Us -->
     <div class="about_us">
         <div class="about_us_container">
           <img src="Images/6.png"/>
           <h1>About Us</h1>
-          <p>Echipa de robotoica "TeoretiKa" FTC 22114 a Liceului Teoretic Negresti Oas, a fost inaugurata in anul 2022 participand la  competitia internationala de First Tech Challenge.
-Prin intermediul competitiei First Tech Challenge  iti arata cum sa creezi un robot dar in acelasi timp iti dezvolta abilitatile. Prin acestea se Numara Lucrul in echipa, conostintele, gandirea dar si abilitatile antreprenoriale.</p>
-        </div>
+          <h2><p>-Turning theoretical ideas into reality since 2022.” Acesta este mottoul care definește echipa de robotică TeoretiKa #22114 din cadrul Liceului Teoretic Negrești-Oaș. Înființată în anul 2022, echipa noastră participă la competiția internațională FIRST Tech Challenge (FTC), unde am învățat că adevărata performanță nu se măsoară doar în trofee, ci și în perseverență, colaborare și dorința de a merge mai departe. De-a lungul anilor am cunoscut atât victorii, cât și înfrângeri, însă fiecare obstacol ne-a motivat să muncim mai mult. Datorită dedicării întregii echipe, în 2025 ne-am calificat la etapa națională a competiției.</p>
+
+ <p> -TeoretiKa este formată din fete și băieți care își unesc pasiunile și abilitățile pentru a transforma ideile în realitate. Fiecare departament – programare, construcție, PR, marketing și design 3D – contribuie cu profesionalism, creativitate și implicare la succesul echipei. Împreună proiectăm, construim și programăm robotul nostru, Teo, simbolul muncii, inovației și ambiției noastre.</p>
+
+ <p>-Dincolo de competiții, credem în puterea comunității și a colaborării. Participăm la numeroase evenimente și competiții dedicate roboticii, iar în acest an am făcut un pas important organizând propriul nostru scrimmage, oferind echipelor oportunitatea de a se pregăti, de a învăța și de a împărtăși experiențe într-un mediu competitiv și prietenos.</p>
+
+ <p>-Pentru noi, TeoretiKa înseamnă mai mult decât robotică. Înseamnă prietenie, respect, muncă în echipă și curajul de a nu renunța niciodată. Fiecare provocare ne face mai puternici, iar fiecare succes este rezultatul dedicării unei echipe care continuă să transforme ideile teoretice în realitate.</p>
+</h2>        
+</div>
     </div>
 
 
@@ -199,3 +222,33 @@ Prin intermediul competitiei First Tech Challenge  iti arata cum sa creezi un ro
   </div>
   </body>
 </html>
+
+
+<!-- scripts -->
+
+<script>
+  const splineViewer = document.querySelector('spline-viewer');
+
+  function hideSplineLogo() {
+    if (splineViewer && splineViewer.shadowRoot) {
+
+      const style = document.createElement('style');
+      style.textContent = '#logo { display: none !important; visibility: hidden !important; }';
+      splineViewer.shadowRoot.appendChild(style);
+    }
+  }
+
+ 
+  hideSplineLogo();
+  const interval = setInterval(() => {
+    if (splineViewer && splineViewer.shadowRoot) {
+      hideSplineLogo();
+
+      const logo = splineViewer.shadowRoot.querySelector('#logo');
+      if (logo) {
+        logo.style.display = 'none';
+        clearInterval(interval);
+      }
+    }
+  }, 100);
+</script>
